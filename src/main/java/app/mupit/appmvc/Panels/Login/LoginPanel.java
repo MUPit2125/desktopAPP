@@ -9,8 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-
-public class LoginController {
+public class LoginPanel {
 
     String pinCode = "";
     @FXML

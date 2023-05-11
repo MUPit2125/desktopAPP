@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.mupit.appmvc.Panels.Login.LoginController">
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="600.0">
+        <AnchorPane fx:id="upperPane" prefHeight="200.0" prefWidth="200.0">
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="600.0">
+                <ImageView fx:id="loginLogo" fitHeight="165.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../shrek1.jpg" />
+                </ImageView>
+                <Label fx:id="loginCurrentShopLabel" alignment="TOP_CENTER" text="OBECNY SKLEP: (sklep)" textAlignment="CENTER">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </VBox>
+        </AnchorPane>
+      <AnchorPane fx:id="upperPane1" prefHeight="200.0" prefWidth="200.0" />
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </padding>
+    </VBox>
+</AnchorPane>
