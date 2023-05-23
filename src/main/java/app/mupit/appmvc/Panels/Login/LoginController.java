@@ -1,13 +1,19 @@
 package app.mupit.appmvc.Panels.Login;
 
+import app.mupit.appmvc.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class LoginController {
@@ -16,15 +22,20 @@ public class LoginController {
     @FXML
     public ImageView loginLogo;
     public Label loginCurrentShopLabel;
-    public Button loginLoginLButton,
-            loginButton1, loginButton2, loginButton3,
-            loginButton4, loginButton5, loginButton6,
-            loginButton7, loginButton8, loginButton9,
-            loginButtondot, loginButton00, loginButton0,
-            loginLoginRButton, loginAboutButton,
-            loginClearButton, loginExitButton,
-            loginChangeShopButton;
+    public Button loginExitButton;
     public AnchorPane upperPane, bottomPane;
+
+
+//    @FXML
+//    public void initialize() {
+//        try {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
+//            Parent loginPanel = loader.load();
+//            bottomPane.getChildren().setAll(loginPanel);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public void login(ActionEvent event) {
         System.out.println("zalogowano");

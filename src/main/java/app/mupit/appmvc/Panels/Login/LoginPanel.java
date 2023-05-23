@@ -15,14 +15,7 @@ public class LoginPanel {
     @FXML
     public ImageView loginLogo;
     public Label loginCurrentShopLabel;
-    public Button loginLoginLButton,
-            loginButton1, loginButton2, loginButton3,
-            loginButton4, loginButton5, loginButton6,
-            loginButton7, loginButton8, loginButton9,
-            loginButtondot, loginButton00, loginButton0,
-            loginLoginRButton, loginAboutButton,
-            loginClearButton, loginExitButton,
-            loginChangeShopButton;
+    public Button loginExitButton;
     public AnchorPane upperPane, bottomPane;
 
     public void login(ActionEvent event) {
