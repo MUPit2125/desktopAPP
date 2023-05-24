@@ -13,150 +13,175 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.mupit.appmvc.Panels.Login.LoginController">
-    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="600.0" />
-     <AnchorPane fx:id="upperPane" prefHeight="200.0" prefWidth="200.0">
-         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="600.0">
-             <ImageView fx:id="loginLogo" fitHeight="165.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
-                 <Image url="@../../../shrek1.jpg" />
-             </ImageView>
-             <Label fx:id="loginCurrentShopLabel" alignment="TOP_CENTER" text="OBECNY SKLEP: (sklep)" textAlignment="CENTER">
-                 <font>
-                     <Font size="20.0" />
-                 </font>
-             </Label>
-         </VBox>
-     </AnchorPane>
-     <AnchorPane fx:id="bottomPane" layoutY="206.0" maxHeight="0.0" maxWidth="0.0" prefHeight="00.0" prefWidth="00.0">
-         <children>
-             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
-                 <padding>
-                     <Insets bottom="10.0" top="5.0" />
-                 </padding>
-                 <children>
-                     <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                         <children>
-                             <GridPane prefHeight="150.0" prefWidth="600.0">
-                                 <columnConstraints>
-                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
-                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
-                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
-                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                     <Button fx:id="loginLoginLButton" mnemonicParsing="false" onAction="#login" prefHeight="170.0" prefWidth="200.0" text="Zaloguj" GridPane.columnIndex="1">
-                                         <GridPane.margin>
-                                             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                         </GridPane.margin>
-                                     </Button>
-                                     <GridPane hgap="5.0" prefHeight="203.0" prefWidth="363.0" vgap="5.0" GridPane.columnIndex="3">
-                                         <columnConstraints>
-                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                         </columnConstraints>
-                                         <rowConstraints>
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                         </rowConstraints>
-                                         <padding>
-                                             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                         </padding>
-                                         <children>
-                                             <Button fx:id="loginButton1" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="1" />
-                                             <Button fx:id="loginButton2" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="2" GridPane.columnIndex="1" />
-                                             <Button fx:id="loginButton3" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="3" GridPane.columnIndex="2" />
-                                             <Button fx:id="loginButton4" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                             <Button fx:id="loginButton5" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                             <Button fx:id="loginButton6" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="4" GridPane.rowIndex="1" />
-                                             <Button fx:id="loginButton7" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                             <Button fx:id="loginButton8" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                             <Button fx:id="loginButton9" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="7" GridPane.rowIndex="2" />
-                                             <Button fx:id="loginButton0" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="0" GridPane.rowIndex="3" />
-                                             <Button fx:id="loginButtondot" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                             <Button fx:id="loginButton00" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                         </children>
-                                     </GridPane>
-                                     <GridPane hgap="5.0" vgap="5.0" GridPane.columnIndex="5">
-                                         <columnConstraints>
-                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                         </columnConstraints>
-                                         <rowConstraints>
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                         </rowConstraints>
-                                         <GridPane.margin>
-                                             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                         </GridPane.margin>
-                                         <children>
-                                             <Button fx:id="loginLoginRButton" mnemonicParsing="false" onAction="#login" prefHeight="100.0" prefWidth="100.0" text="Zaloguj">
-                                                 <GridPane.margin>
-                                                     <Insets />
-                                                 </GridPane.margin>
-                                             </Button>
-                                             <Button fx:id="loginAboutButton" mnemonicParsing="false" onAction="#about" prefHeight="100.0" prefWidth="100.0" text="Info" GridPane.columnIndex="1" />
-                                             <Button fx:id="loginClearButton" mnemonicParsing="false" onAction="#clear" prefHeight="100.0" prefWidth="100.0" text="Wyczyść" GridPane.rowIndex="1" />
-                                             <Button fx:id="loginExitButton" mnemonicParsing="false" onAction="#exit" prefHeight="100.0" prefWidth="100.0" text="Wyjdź" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                         </children>
-                                     </GridPane>
-                                 <AnchorPane />
-                                 </children>
-                             </GridPane>
-                             <Button fx:id="loginChangeShopButton" layoutX="13.0" layoutY="170.0" mnemonicParsing="false" onAction="#changeShop" prefHeight="25.0" prefWidth="574.0" text="Zmiana sklepu" />
-                         </children>
-                     </AnchorPane>
-                 </children>
-             </VBox>
-         </children>
-     </AnchorPane>
-
-     <AnchorPane disable="true" layoutY="200.0" prefHeight="200.0" prefWidth="600.0">
-         <children>
-             <VBox prefHeight="200.0" prefWidth="600.0" spacing="10.0">
-                 <children>
-                     <HBox prefHeight="330.0" prefWidth="600.0" spacing="10.0">
-                         <children>
-                             <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="200.0" text="GASTRO">
-                                 <HBox.margin>
-                                     <Insets />
-                                 </HBox.margin>
-                                 <font>
-                                     <Font size="24.0" />
-                                 </font>
-                             </Button>
-                             <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="200.0" text="BUDOWA">
-                                 <HBox.margin>
-                                     <Insets />
-                                 </HBox.margin>
-                                 <font>
-                                     <Font size="24.0" />
-                                 </font>
-                             </Button>
-                             <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="200.0" text="MECHANIKA">
-                                 <HBox.margin>
-                                     <Insets />
-                                 </HBox.margin>
-                                 <font>
-                                     <Font size="24.0" />
-                                 </font>
-                             </Button>
-                         </children>
-                     </HBox>
-                     <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="600.0" text="POWRÓT" />
-                 </children>
-                 <padding>
-                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                 </padding>
-             </VBox>
-         </children>
-     </AnchorPane>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.mupit.appmvc.controllers.LoginController">
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="600.0"/>
+    <AnchorPane id="upperPane" prefHeight="200.0" prefWidth="200.0">
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="600.0">
+            <ImageView fx:id="loginLogo" fitHeight="165.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../../shrek1.jpg"/>
+                <VBox.margin>
+                    <Insets top="10.0"/>
+                </VBox.margin>
+            </ImageView>
+            <Label fx:id="loginCurrentShopLabel" alignment="TOP_CENTER" text="OBECNY SKLEP: (sklep)"
+                   textAlignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
+            <AnchorPane fx:id="loginSHOPS" prefHeight="210.0" prefWidth="600.0" visible="false">
+                <VBox prefHeight="200.0" prefWidth="600.0" spacing="10.0">
+                    <HBox prefHeight="330.0" prefWidth="600.0" spacing="10.0">
+                        <Button fx:id="bGastro" mnemonicParsing="false" prefHeight="140.0" prefWidth="200.0"
+                                text="GASTRO" onAction="#chooseShop">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="bBudowa" mnemonicParsing="false" prefHeight="140.0" prefWidth="200.0"
+                                text="BUDOWA" onAction="#chooseShop">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="bMechanika" mnemonicParsing="false" prefHeight="140.0" prefWidth="200.0"
+                                text="MECHANIKA" onAction="#chooseShop">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <padding>
+                            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                        </padding>
+                    </HBox>
+                    <Button fx:id="bPowrot" mnemonicParsing="false" prefHeight="25.0" prefWidth="580.0"
+                            text="POWRÓT" onAction="#choosePowrot"/>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                </VBox>
+            </AnchorPane>
+        </VBox>
+    </AnchorPane>
+    <AnchorPane fx:id="loginPIN" layoutY="208.0" maxHeight="210.0" maxWidth="600.0" prefHeight="200.0" prefWidth="600.0"
+                visible="true">
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+            <padding>
+                <Insets bottom="10.0" top="5.0"/>
+            </padding>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                <GridPane prefHeight="150.0" prefWidth="600.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                           prefWidth="10.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                           prefWidth="10.0"/>
+                        q
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                           prefWidth="10.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                           prefWidth="10.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <Button fx:id="loginLoginLButton" mnemonicParsing="false" onAction="#login"
+                            prefHeight="170.0" prefWidth="200.0" text="Zaloguj"
+                            GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets bottom="3.0" left="1.0" right="1.0" top="3.0"/>
+                        </GridPane.margin>
+                    </Button>
+                    <GridPane hgap="3.0" prefHeight="203.0" prefWidth="363.0" vgap="3.0"
+                              GridPane.columnIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <padding>
+                            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                        </padding>
+                        <Button fx:id="loginButton1" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0"
+                                text="1"/>
+                        <Button fx:id="loginButton2" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="2"
+                                GridPane.columnIndex="1"/>
+                        <Button fx:id="loginButton3" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="3"
+                                GridPane.columnIndex="2"/>
+                        <Button fx:id="loginButton5" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="5"
+                                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Button fx:id="loginButton6" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="6"
+                                GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                        <Button fx:id="loginButton4" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="4"
+                                GridPane.rowIndex="1"/>
+                        <Button fx:id="loginButton8" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="8"
+                                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Button fx:id="loginButton9" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="9"
+                                GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                        <Button fx:id="loginButton7" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="7"
+                                GridPane.rowIndex="2"/>
+                        <Button fx:id="loginButton0" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="0"
+                                GridPane.rowIndex="3"/>
+                        <Button fx:id="loginButtondot" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="."
+                                GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Button fx:id="loginButton00" onAction="#handleButtonClicked"
+                                mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="00"
+                                GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    </GridPane>
+                    <GridPane hgap="5.0" vgap="5.0" GridPane.columnIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <GridPane.margin>
+                            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                        </GridPane.margin>
+                        <Button fx:id="loginLoginRButton" mnemonicParsing="false" onAction="#login"
+                                prefHeight="100.0" prefWidth="100.0" text="Zaloguj">
+                            <GridPane.margin>
+                                <Insets/>
+                            </GridPane.margin>
+                        </Button>
+                        <Button fx:id="loginAboutButton" mnemonicParsing="false" onAction="#about"
+                                prefHeight="100.0" prefWidth="100.0" text="Info"
+                                GridPane.columnIndex="1"/>
+                        <Button fx:id="loginClearButton" mnemonicParsing="false" onAction="#clear"
+                                prefHeight="100.0" prefWidth="100.0" text="Wyczyść"
+                                GridPane.rowIndex="1"/>
+                        <Button fx:id="loginExitButton" mnemonicParsing="false" onAction="#exit"
+                                prefHeight="100.0" prefWidth="100.0" text="Wyjdź"
+                                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    </GridPane>
+                    <AnchorPane/>
+                </GridPane>
+            </AnchorPane>
+            <Button fx:id="loginChangeShopButton" mnemonicParsing="false" onAction="#changeShop"
+                    prefHeight="25.0" prefWidth="580.0" text="Zmiana sklepu"/>
+        </VBox>
+    </AnchorPane>
 </AnchorPane>

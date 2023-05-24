@@ -11,6 +11,6 @@ module app.mupit.appmvc {
 
     opens app.mupit.appmvc to javafx.fxml;
     exports app.mupit.appmvc;
-    exports app.mupit.appmvc.Panels.Login;
-    opens app.mupit.appmvc.Panels.Login to javafx.fxml;
+    exports app.mupit.appmvc.controllers;
+    opens app.mupit.appmvc.controllers to javafx.fxml;
 }
