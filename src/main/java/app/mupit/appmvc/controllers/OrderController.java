@@ -406,6 +406,7 @@ public class OrderController {
                 .sum();
 
 
+
         // Uaktualnij Label "dozaplaty"
         dozaplaty.setText("Do zapłaty: " + sumaCen + " zł.");
     }
