@@ -17,9 +17,17 @@ import java.io.IOException;
 
 public class OrderController {
 
-    public Label idrachunku, dozaplaty;
-    public TableView rachunektabela;
-    public TableColumn nazwaKolumna, iloscKolumna, cenaKolumna;
+    public Label idrachunku,
+    dozaplaty,napiwek,zaplacono,sumadozaplaty,
+    dozaplatycena,napiwekcena,zaplaconocena,sumadozaplatycena;
+    @FXML
+    private TableView<Product> rachunektabela;
+    @FXML
+    private TableColumn<Product, String> tabColName;
+    @FXML
+    private TableColumn<Product, Integer> tabColQuantity;
+    @FXML
+    private TableColumn<Product, Double> tabColPrice;
     public Button keypadButton1, keypadButton2, keypadButton3,
             keypadButton4, keypadButton5, keypadButton6,
             keypadButton7, keypadButton8, keypadButton9,
@@ -35,13 +43,11 @@ public class OrderController {
     public Button foodGlowne1, foodGlowne2, foodGlowne3, foodGlowne4, foodGlowne5, foodGlowne6;
     public Button foodDeser1, foodDeser2, foodDeser3, foodDeser4, foodDeser5, foodDeser6;
 
-
     // opcje napojow
     public Button Gorace, Zimne, Bezalko;
     public Button napojeGorace1, napojeGorace2, napojeGorace3, napojeGorace4, napojeGorace5, napojeGorace6;
     public Button napojeZimne1, napojeZimne2, napojeZimne3, napojeZimne4, napojeZimne5, napojeZimne6;
     public Button napojeBezalko1, napojeBezalko2, napojeBezalko3, napojeBezalko4, napojeBezalko5, napojeBezalko6;
-
 
     // opcje alkoholi
     public Button Wino, Piwo, Koktajl;
@@ -50,6 +56,8 @@ public class OrderController {
     public Button alkoKoktajl1, alkoKoktajl2, alkoKoktajl3, alkoKoktajl4, alkoKoktajl5, alkoKoktajl6;
     public GridPane zupy, daniaglowne, desery, gorace, zimne, bezalko, wino, piwo, koktajl;
     public GridPane menuJedzenie, menuNapoje, menuAlkohole;
+
+    int quantityValue = 1;
 
     public void handleKeypadClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
@@ -111,7 +119,6 @@ public class OrderController {
         piwo.setVisible(false);
         koktajl.setVisible(false);
     }
-
 
     @FXML
     private void chooseZupy() {
@@ -212,6 +219,12 @@ public class OrderController {
             case "Alkohole" -> menuAlkohole.setVisible(true);
         }
     }
+//    @FXML
+//    private void chooseZupa() {
+//        Product zupa = new Product("Zupa", 10.99);
+//        // Dodaj zupę do tabeli lub listy produktów
+//        rachunektabela.getItems().add(zupa);
+//    }
     @FXML
     private void chooseSubcategory(String subcategory) {
         System.out.println("Menu - " + subcategory);
@@ -240,6 +253,7 @@ public class OrderController {
             case "Koktajl" -> koktajl.setVisible(true);
         }
     }
+/*
     @FXML
     private void handleJedzenieButtonClicked(ActionEvent event) {
         chooseCategory("Jedzenie");
@@ -287,44 +301,52 @@ public class OrderController {
     @FXML
     private void handleKoktajlButtonClicked(ActionEvent event) {
         chooseSubcategory("Koktajl");
-    }
+    }*/
 
     @FXML
-    private void chooseZupa() {
-        Product zupa = new Product("Zupa", 10.99);
-        // Dodaj zupę do tabeli lub listy produktów
-        rachunektabela.getItems().add(zupa);
-    }
-
-    @FXML
-    private void chooseDanieGlowne() {
-        Product danieGlowne = new Product("Danie Główne", 25.99);
-        // Dodaj danie główne do tabeli lub listy produktów
-        rachunektabela.getItems().add(danieGlowne);
-    }
-
-    @FXML
-    private void handleProductClicked(ActionEvent event) {
+    private void handleCategoryButtonClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
-        clickedButton.setDisable(true);
-        clickedButton.setStyle("-fx-background-color: red;");
+        String category = clickedButton.getText();
+        chooseCategory(category);
+    }
 
-        // Pobierz wybrany produkt
-        // (możesz zastosować odpowiednie metody dostępu
-        // do danych w zależności od implementacji)
-        
-        Product selectedProduct = (Product) clickedButton.getUserData();
+    @FXML
+    private void handleSubcategoryButtonClicked(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        String subcategory = clickedButton.getText();
+        chooseSubcategory(subcategory);
+    }
+//
+//    private void chooseCategory(String category) {
+//        System.out.println("Menu - " + category);
+//        // Logika wyświetlania odpowiednich elementów dla wybranej kategorii
+//    }
+//
+//    private void chooseSubcategory(String subcategory) {
+//        System.out.println("Menu - " + subcategory);
+//        // Logika wyświetlania odpowiednich elementów dla wybranej podkategorii
+//    }
+//
+//    @FXML
+//    private void handleProductButtonClicked(ActionEvent event) {
+//        Button clickedButton = (Button) event.getSource();
+//        String productName = clickedButton.getText();
+//        double productPrice = Product.getProductPrice(productName);
+//
+//        // Tworzenie nowego produktu
+//        Product product = new Product(productName, 1, productPrice);
+//
+//        // Dodawanie produktu do tabeli "rachunek"
+//        rachunektabela.getItems().add(product);
+//    }
 
-        // Dodaj wybrany produkt do tabeli
-        rachunektabela.getItems().add(selectedProduct);
+    @FXML
+    private void handleNumericButtonClicked(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        String buttonValue = clickedButton.getText();
 
-        // Oblicz sumę cen
-        double sumaCen = rachunektabela.getItems().stream()
-                .mapToDouble(Product::getCena)
-                .sum();
-
-        // Uaktualnij Label "dozaplaty"
-        dozaplaty.setText("Do zapłaty: " + sumaCen + " zł.");
+        // Dodawanie klikniętej wartości do aktualnego ciągu
+        quantityValue = Integer.parseInt(quantityValue + buttonValue);
     }
 
     public void cancel(ActionEvent event) throws IOException {
@@ -356,6 +378,37 @@ public class OrderController {
         primaryStage.show();
     }
 
+//    @FXML
+//    private void chooseDanieGlowne() {
+//        Product danieGlowne = new Product("Danie Główne", 25.99);
+//        // Dodaj danie główne do tabeli lub listy produktów
+//        rachunektabela.getItems().add(danieGlowne);
+//    }
+
+    @FXML
+    private void handleProductClicked(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        clickedButton.setDisable(true);
+        clickedButton.setStyle("-fx-background-color: red;");
+
+        // Pobierz wybrany produkt
+        // (możesz zastosować odpowiednie metody dostępu
+        // do danych w zależności od implementacji)
+
+        Product selectedProduct = (Product) clickedButton.getUserData();
+
+        // Dodaj wybrany produkt do tabeli
+        rachunektabela.getItems().add(selectedProduct);
+
+        // Oblicz sumę cen
+        double sumaCen = rachunektabela.getItems().stream()
+                .mapToDouble(Product::getProductPrice)
+                .sum();
+
+
+        // Uaktualnij Label "dozaplaty"
+        dozaplaty.setText("Do zapłaty: " + sumaCen + " zł.");
+    }
 
 
 }

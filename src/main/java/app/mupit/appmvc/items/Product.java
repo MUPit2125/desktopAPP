@@ -2,24 +2,27 @@ package app.mupit.appmvc.items;
 
 public class Product {
     // tu zostaną dodane produkty do spożycia
-    private static String nazwa;
-    private static double cena;
+    private static String productName;
 
-    public Product(String nazwa, double cena) {
-        Product.nazwa = nazwa;
-        Product.cena = cena;
+    private static int productQuantity = 1;
+    private static double productPrice;
+
+    public Product(String productName, int productQuantity, double productPrice) {
+        Product.productName = productName;
+        Product.productQuantity = productQuantity;
+        Product.productPrice = productPrice;
     }
 
-    public String getNazwa() {
-        return nazwa;
+    public static String getProductName() {
+        return productName;
     }
 
-    public static double getCena() {
-        return cena;
+    public static int getProductQuantity() {
+        return productQuantity;
     }
 
-    public static double getCena(Object o) {
-        return 0;
+    public double getProductPrice() {
+        return productPrice;
     }
 }
 
