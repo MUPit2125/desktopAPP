@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -62,39 +63,15 @@ public class LoginController {
 
         loginSHOPS.setVisible(false);
         loginPIN.setVisible(true);
+
+        switch(shopName){
+            case "GASTRO" -> loginLogo.setImage(new Image("restauracja.jpg"));
+            case "BUDOWA" -> loginLogo.setImage(new Image("budowlanka.jpg"));
+            case "MECHANIKA" -> loginLogo.setImage(new Image("mechanik.jpg"));
+        }
+
     }
 
-    /*
-    @FXML
-    private void chooseMechanika() {
-        System.out.println("Zmiana sklepu na MECHANIKA");
-
-        loginCurrentShopLabel.setText("OBECNY SKLEP: " + bMechanika.getText());
-
-        loginSHOPS.setVisible(false);
-        loginPIN.setVisible(true);
-    }
-
-    @FXML
-    private void chooseGastro() {
-        System.out.println("Zmiana sklepu na GASTRONOMIA");
-
-        loginCurrentShopLabel.setText("OBECNY SKLEP: " + bGastro.getText());
-
-        loginSHOPS.setVisible(false);
-        loginPIN.setVisible(true);
-    }
-
-    @FXML
-    private void chooseBudowa() {
-        System.out.println("Zmiana sklepu na BUDOWA");
-
-        loginCurrentShopLabel.setText("OBECNY SKLEP: " + bBudowa.getText());
-
-        loginSHOPS.setVisible(false);
-        loginPIN.setVisible(true);
-    }
-    */
 
     @FXML
     public void exit() {
