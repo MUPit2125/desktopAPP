@@ -25,9 +25,9 @@
                           </Label>
                           <TableView id="rachunektabela" prefHeight="234.0" prefWidth="464.0">
                               <columns>
-                                  <TableColumn id="tabColName" fx:id="nazwaKolumna" prefWidth="150" text="Pozycja" />
-                                  <TableColumn id="tabColQuantity" fx:id="iloscKolumna" prefWidth="150" text="Ilość" />
-                                  <TableColumn id="tabColPrice" fx:id="cenaKolumna" prefWidth="100" text="Cena" />
+                                  <TableColumn fx:id="tabColName" prefWidth="150" text="Pozycja" />
+                                  <TableColumn fx:id="tabColQuantity" prefWidth="150" text="Ilość" />
+                                  <TableColumn fx:id="tabColPrice" prefWidth="100" text="Cena" />
                               </columns>
                           </TableView>
                                        </VBox>
@@ -244,12 +244,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="foodZupa1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Zupa pomidorowa" GridPane.columnIndex="1" />
-                        <Button fx:id="foodZupa2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Rosół" GridPane.columnIndex="2" />
-                        <Button fx:id="foodZupa3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Zupa krem z brokułów" GridPane.rowIndex="1" />
-                        <Button fx:id="foodZupa4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Barszcz czerwony" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="foodZupa5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Zupa ogórkowa" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="foodZupa6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Zupa grzybowa" />
+                        <Button fx:id="foodZupa1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Zupa pomidorowa" GridPane.columnIndex="1" />
+                        <Button fx:id="foodZupa2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Rosół" GridPane.columnIndex="2" />
+                        <Button fx:id="foodZupa3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Zupa krem z brokułów" GridPane.rowIndex="1" />
+                        <Button fx:id="foodZupa4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Barszcz czerwony" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="foodZupa5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Zupa ogórkowa" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="foodZupa6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Zupa grzybowa" />
                     </GridPane>
                     <GridPane fx:id="daniaglowne" hgap="2.0" prefHeight="150.0" prefWidth="300.0" vgap="2.0" visible="false">
                         <columnConstraints>
@@ -261,12 +261,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="foodGlowne1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Schabowy z ziemniakami i surówką" GridPane.columnIndex="1" />
-                        <Button fx:id="foodGlowne2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Spaghetti bolognese" GridPane.columnIndex="2" />
-                        <Button fx:id="foodGlowne3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Kurczak curry z ryżem" />
-                        <Button fx:id="foodGlowne4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Pierogi ruskie" GridPane.rowIndex="1" />
-                        <Button fx:id="foodGlowne5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Karkówka z kapustą i kluskami" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="foodGlowne6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Gulasz z wołowiny" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="foodGlowne1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Schabowy z ziemniakami i surówką" GridPane.columnIndex="1" />
+                        <Button fx:id="foodGlowne2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Spaghetti bolognese" GridPane.columnIndex="2" />
+                        <Button fx:id="foodGlowne3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Kurczak curry z ryżem" />
+                        <Button fx:id="foodGlowne4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Pierogi ruskie" GridPane.rowIndex="1" />
+                        <Button fx:id="foodGlowne5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Karkówka z kapustą i kluskami" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="foodGlowne6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Gulasz z wołowiny" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </GridPane>
                     <GridPane fx:id="desery" hgap="2.0" prefHeight="150.0" prefWidth="300.0" vgap="2.0" visible="false">
                         <columnConstraints>
@@ -278,12 +278,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="foodDeser1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Sernik" GridPane.columnIndex="1" />
-                        <Button fx:id="foodDeser2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Tiramisu" GridPane.columnIndex="2" />
-                        <Button fx:id="foodDeser3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Panna cotta" GridPane.rowIndex="1" />
-                        <Button fx:id="foodDeser4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Ciasto czekoladowe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="foodDeser5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Krem karmelowy" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="foodDeser6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Tarta owocowa" />
+                        <Button fx:id="foodDeser1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Sernik" GridPane.columnIndex="1" />
+                        <Button fx:id="foodDeser2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Tiramisu" GridPane.columnIndex="2" />
+                        <Button fx:id="foodDeser3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Panna cotta" GridPane.rowIndex="1" />
+                        <Button fx:id="foodDeser4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Ciasto czekoladowe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="foodDeser5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Krem karmelowy" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="foodDeser6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Tarta owocowa" />
                     </GridPane>
                     <padding>
                         <Insets top="3.0" />
@@ -300,12 +300,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="napojeGorace1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Kawa" GridPane.columnIndex="1" />
-                        <Button fx:id="napojeGorace2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Herbata zielona" GridPane.columnIndex="2" />
-                        <Button fx:id="napojeGorace3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Czekolada" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeGorace4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Espresso" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeGorace5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Cappuccino" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeGorace6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Latte macchiato" />
+                        <Button fx:id="napojeGorace1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Kawa" GridPane.columnIndex="1" />
+                        <Button fx:id="napojeGorace2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Herbata zielona" GridPane.columnIndex="2" />
+                        <Button fx:id="napojeGorace3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Czekolada" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeGorace4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Espresso" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeGorace5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Cappuccino" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeGorace6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Latte macchiato" />
                     </GridPane>
                     <GridPane fx:id="zimne" hgap="2.0" prefHeight="150.0" prefWidth="300.0" vgap="2.0" visible="false">
                         <columnConstraints>
@@ -317,12 +317,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="napojeZimne1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Cola" GridPane.columnIndex="1" />
-                        <Button fx:id="napojeZimne2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Sok pomarańczowy" GridPane.columnIndex="2" />
-                        <Button fx:id="napojeZimne3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Lemoniada" />
-                        <Button fx:id="napojeZimne4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Woda gazowana" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeZimne5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Ice tea" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeZimne6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Smoothie owocowe" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeZimne1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Cola" GridPane.columnIndex="1" />
+                        <Button fx:id="napojeZimne2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Sok pomarańczowy" GridPane.columnIndex="2" />
+                        <Button fx:id="napojeZimne3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Lemoniada" />
+                        <Button fx:id="napojeZimne4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Woda gazowana" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeZimne5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Ice tea" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeZimne6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Smoothie owocowe" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </GridPane>
                     <GridPane fx:id="bezalko" hgap="2.0" prefHeight="150.0" prefWidth="300.0" vgap="2.0" visible="false">
                         <columnConstraints>
@@ -334,12 +334,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="napojeBezalko1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Sprite" GridPane.columnIndex="1" />
-                        <Button fx:id="napojeBezalko2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Sprite" GridPane.columnIndex="2" />
-                        <Button fx:id="napojeBezalko3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="7Up" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeBezalko4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Tonik" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeBezalko5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Red Bull" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="napojeBezalko6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Red Bull" />
+                        <Button fx:id="napojeBezalko1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Sprite" GridPane.columnIndex="1" />
+                        <Button fx:id="napojeBezalko2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Sprite" GridPane.columnIndex="2" />
+                        <Button fx:id="napojeBezalko3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="7Up" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeBezalko4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Tonik" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeBezalko5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Red Bull" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="napojeBezalko6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Red Bull" />
                     </GridPane>
                     <padding>
                         <Insets top="3.0" />
@@ -356,12 +356,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="alkoWino1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Czerwone wino" GridPane.columnIndex="1" />
-                        <Button fx:id="alkoWino2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Różowe wino" GridPane.columnIndex="2" />
-                        <Button fx:id="alkoWino3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Różowe wino" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoWino4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Szampan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoWino5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Prosecco" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoWino6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Sangria" />
+                        <Button fx:id="alkoWino1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Czerwone wino" GridPane.columnIndex="1" />
+                        <Button fx:id="alkoWino2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Różowe wino" GridPane.columnIndex="2" />
+                        <Button fx:id="alkoWino3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Różowe wino" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoWino4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Szampan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoWino5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Prosecco" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoWino6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Sangria" />
                     </GridPane>
                     <GridPane fx:id="piwo" hgap="4.0" prefHeight="150.0" prefWidth="300.0" vgap="4.0" visible="false">
                         <columnConstraints>
@@ -373,12 +373,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="alkoPiwo1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Lager" GridPane.columnIndex="1" />
-                        <Button fx:id="alkoPiwo2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="IPA" GridPane.columnIndex="2" />
-                        <Button fx:id="alkoPiwo3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Smakowe" />
-                        <Button fx:id="alkoPiwo4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Stout" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoPiwo5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Pszeniczne" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoPiwo6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Porter" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoPiwo1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Lager" GridPane.columnIndex="1" />
+                        <Button fx:id="alkoPiwo2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="IPA" GridPane.columnIndex="2" />
+                        <Button fx:id="alkoPiwo3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Smakowe" />
+                        <Button fx:id="alkoPiwo4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Stout" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoPiwo5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Pszeniczne" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoPiwo6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Porter" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </GridPane>
                     <GridPane fx:id="koktajl" hgap="4.0" prefHeight="150.0" prefWidth="300.0" vgap="4.0" visible="false">
                         <columnConstraints>
@@ -390,12 +390,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <Button fx:id="alkoKoktajl1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Mojito" GridPane.columnIndex="1" />
-                        <Button fx:id="alkoKoktajl2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Pina Colada" GridPane.columnIndex="2" />
-                        <Button fx:id="alkoKoktajl3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Sex on the Beach" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoKoktajl4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Margarita" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoKoktajl5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Martini" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="alkoKoktajl6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductButtonClicked" text="Cosmopolitan" />
+                        <Button fx:id="alkoKoktajl1" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Mojito" GridPane.columnIndex="1" />
+                        <Button fx:id="alkoKoktajl2" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Pina Colada" GridPane.columnIndex="2" />
+                        <Button fx:id="alkoKoktajl3" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Sex on the Beach" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoKoktajl4" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Margarita" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoKoktajl5" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Martini" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="alkoKoktajl6" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" onAction="#handleProductClicked" text="Cosmopolitan" />
                     </GridPane>
                     <padding>
                         <Insets top="3.0" />
