@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class GastroController {
 
@@ -29,7 +30,7 @@ public class GastroController {
         Stage primaryStage = (Stage) clickedButton.getScene().getWindow();
 
         try {
-            Parent orderSceneRoot = FXMLLoader.load(getClass().getResource("/app/mupit/appmvc/orderScene.fxml"));
+            Parent orderSceneRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/app/mupit/appmvc/orderScene.fxml")));
             Scene orderScene = new Scene(orderSceneRoot);
             primaryStage.setScene(orderScene);
             primaryStage.show();
@@ -41,7 +42,7 @@ public class GastroController {
     public void logout(ActionEvent event) throws IOException {
         System.out.println("wylogowano");
         Stage primaryStage = (Stage) lobbyLogout.getScene().getWindow();
-        Parent loginSceneRoot = FXMLLoader.load(getClass().getResource("/app/mupit/appmvc/loginScene.fxml"));
+        Parent loginSceneRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/app/mupit/appmvc/loginScene.fxml")));
         Scene loginScene = new Scene(loginSceneRoot);
         primaryStage.setScene(loginScene);
         primaryStage.show();
