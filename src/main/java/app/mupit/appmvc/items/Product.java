@@ -21,6 +21,10 @@ public class Product {
         return productQuantity;
     }
 
+    public static double getProductPrice(String productName) {
+        return productPrice;
+    }
+
     public double getProductPrice() {
         return productPrice;
     }
